@@ -11,7 +11,7 @@ public class PlayerSelection {
         name = input.nextLine();
         System.out.println("How old are you?");
         age = input.nextByte();
-        System.out.println("How tall are you?");
+        System.out.println("How tall are you in meters?");
         height = input.nextFloat();
         System.out.println("How much do you weight?");
         weight = input.nextFloat();
@@ -24,11 +24,7 @@ public class PlayerSelection {
         height = height * METER;
         int weightInt = (int) weight;
         int heightInt = (int) height;
-        System.out.println("Player name - " + name);
-        System.out.println("Age - " + age);
-        System.out.println("Height - " + heightInt + "cm");
-        System.out.println("Weight - " + weightInt + "kg");
-        System.out.println("Jersey Number - " + jerseyNumber);
+
 
 
         boolean playerEligible = age >= 18 && age < 35 && weightInt < 90;
