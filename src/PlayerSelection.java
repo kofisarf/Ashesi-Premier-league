@@ -6,6 +6,8 @@ public class PlayerSelection {
         String name;
         byte age, jerseyNumber;
         double height, weight;
+
+        //Accepting input from the user
         Scanner input = new Scanner(System.in);
         System.out.println("What is your name?");
         name = input.nextLine();
@@ -18,6 +20,7 @@ public class PlayerSelection {
         System.out.println("What is your jersey number");
         jerseyNumber = input.nextByte();
 
+        // converting weight to kg and height to centimeters
         final double POUND = 0.45359237;
         final int METER = 100;
         weight = weight * POUND;
@@ -26,7 +29,7 @@ public class PlayerSelection {
         int heightInt = (int) height;
 
 
-
+        //Checking eligibility of player
         boolean playerEligible = age >= 18 && age < 35 && weightInt < 90;
         String eligibility;
         if (playerEligible)
@@ -34,10 +37,12 @@ public class PlayerSelection {
         else
             eligibility = "Not Eligible";
 
+
         boolean playerProblem = age <= 18 || weightInt >= 90;
         if (playerProblem)
             System.out.println("Player has a problem (either too young or too heavy)");
 
+        //Categorizing players by age
         String category;
         if (age < 20) {
             category = "Rising Star";
@@ -48,6 +53,8 @@ public class PlayerSelection {
         else {
             category = "Veteran";}
 
+
+        //Using Switch Cases to assign position based on jersey number
         String position;
         switch (jerseyNumber) {
             case 1:
