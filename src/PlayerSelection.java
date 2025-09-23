@@ -111,7 +111,6 @@ public class PlayerSelection {
         String status = playerEligible ? "Play" : "Rest";
 
 
-
         System.out.println("Player name : " + name);
         System.out.println("Age : " + age + "(" + category + ")");
         System.out.println("Height : " + heightInt + "cm");
